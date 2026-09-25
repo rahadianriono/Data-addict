@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rahadian - Excel Report & Dashboard</title>
+<style>
+  :root{
+    --bg:#0f1720; --card:#16212c; --text:#eef2f6; --muted:#9db0c2;
+    --accent:#3ddc97; --accent2:#4fa3ff; --border:#26333f;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#f4f7fa; --card:#ffffff; --text:#132030; --muted:#5b6b7a;
+      --accent:#0f9d6a; --accent2:#2f6fed; --border:#e1e8ee;
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#f4f7fa; --card:#ffffff; --text:#132030; --muted:#5b6b7a;
+    --accent:#0f9d6a; --accent2:#2f6fed; --border:#e1e8ee;
+  }
+  html,body{height:100%;}
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    display:flex; justify-content:center; padding:32px 16px;
+  }
+  .card{ width:100%; max-width:420px; }
+
+  .avatar{
+    width:72px; height:72px; border-radius:50%; margin:0 auto 14px;
+    background:linear-gradient(135deg,var(--accent2),var(--accent));
+    display:flex; align-items:center; justify-content:center;
+    font-size:26px; font-weight:800; color:#06131a;
+  }
+  h1{ text-align:center; font-size:19px; margin:0 0 4px; }
+  .tag{ text-align:center; color:var(--muted); font-size:13.5px; margin:0 0 22px; }
+
+  .link{
+    display:flex; align-items:center; gap:12px;
+    background:var(--card); border:1px solid var(--border); border-radius:14px;
+    padding:14px 16px; margin-bottom:12px; text-decoration:none; color:var(--text);
+  }
+  .link .ic{ font-size:18px; width:24px; text-align:center; }
+  .link .body{ flex:1; }
+  .link b{ display:block; font-size:14px; }
+  .link small{ color:var(--muted); font-size:12px; }
+  .link.primary{ background:linear-gradient(135deg,var(--accent2),var(--accent)); color:#06131a; border:none; }
+  .link.primary small{ color:#06131a; opacity:.8; }
+
+  .services{ display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin:20px 0 24px; }
+  .chip{ background:var(--card); border:1px solid var(--border); color:var(--muted);
+    font-size:11.5px; padding:5px 10px; border-radius:999px; }
+
+  footer{ text-align:center; color:var(--muted); font-size:11.5px; margin-top:10px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="avatar">R</div>
+    <h1>Rahadian</h1>
+    <p class="tag">📊 Excel Report &amp; Dashboard Specialist<br>Bantu UMKM &amp; sales team merapikan data jualan</p>
+
+    <div class="services">
+      <span class="chip">Sales Report</span>
+      <span class="chip">Dashboard</span>
+      <span class="chip">Target vs Actual</span>
+      <span class="chip">Data Cleaning</span>
+      <span class="chip">Stock Management</span>
+    </div>
+
+    <a class="link primary" href="#">
+      <span class="ic">💬</span>
+      <span class="body"><b>DM / WhatsApp</b><small>Kirim contoh data, mulai konsultasi gratis</small></span>
+    </a>
+    <a class="link" href="#">
+      <span class="ic">🖼️</span>
+      <span class="body"><b>Lihat Portofolio</b><small>Contoh dashboard yang pernah dibuat</small></span>
+    </a>
+    <a class="link" href="#">
+      <span class="ic">📸</span>
+      <span class="body"><b>Instagram</b><small>@username</small></span>
+    </a>
+    <a class="link" href="#">
+      <span class="ic">🎵</span>
+      <span class="body"><b>TikTok</b><small>@username</small></span>
+    </a>
+
+    <footer>Excel Report &amp; Dashboard Services</footer>
+  </div>
+</body>
+</html>
