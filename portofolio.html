@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portofolio - Rahadian Excel Dashboard</title>
+<style>
+  :root{
+    --bg:#0f1720; --card:#16212c; --text:#eef2f6; --muted:#9db0c2;
+    --accent:#3ddc97; --accent2:#4fa3ff; --border:#26333f;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#f4f7fa; --card:#ffffff; --text:#132030; --muted:#5b6b7a;
+      --accent:#0f9d6a; --accent2:#2f6fed; --border:#e1e8ee;
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#f4f7fa; --card:#ffffff; --text:#132030; --muted:#5b6b7a;
+    --accent:#0f9d6a; --accent2:#2f6fed; --border:#e1e8ee;
+  }
+  html,body{height:100%;}
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+  }
+  header{ text-align:center; padding:36px 20px 28px; }
+  .eyebrow{ color:var(--accent); font-weight:700; font-size:12.5px;
+    letter-spacing:1.5px; text-transform:uppercase; margin:0 0 8px; }
+  h1{ font-size:24px; margin:0 0 8px; }
+  header p{ color:var(--muted); font-size:14px; max-width:420px; margin:0 auto; }
+
+  .gallery{ max-width:520px; margin:0 auto; padding:0 16px 40px;
+    display:grid; grid-template-columns:1fr; gap:16px; }
+
+  .card{ background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; }
+  .card h3{ font-size:15px; margin:0 0 4px; }
+  .card p{ font-size:12.5px; color:var(--muted); margin:0 0 14px; }
+
+  .mock{ background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:14px; }
+  .bars{ display:flex; align-items:flex-end; gap:6px; height:56px; }
+  .bar{ flex:1; border-radius:4px 4px 0 0; background:linear-gradient(180deg,var(--accent2),var(--accent)); }
+
+  .rows .row{ display:flex; justify-content:space-between; align-items:center;
+    padding:7px 0; border-bottom:1px solid var(--border); font-size:12.5px; }
+  .rows .row:last-child{ border-bottom:none; }
+  .row b{ color:var(--accent); }
+
+  .donut{ display:flex; align-items:center; gap:14px; }
+  .ring{ width:56px; height:56px; border-radius:50%;
+    background:conic-gradient(var(--accent) 0 68%, var(--border) 68% 100%); flex-shrink:0; }
+  .donut .txt{ font-size:12px; color:var(--muted); }
+  .donut .txt b{ display:block; font-size:16px; color:var(--text); }
+
+  .list{ font-size:12.5px; color:var(--muted); }
+  .list div{ padding:4px 0; }
+
+  footer{ text-align:center; padding:0 20px 36px; }
+  .cta{ display:inline-block; background:linear-gradient(135deg,var(--accent2),var(--accent));
+    color:#06131a; font-size:13.5px; font-weight:700; padding:12px 22px; border-radius:12px;
+    text-decoration:none; }
+</style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Portofolio</p>
+    <h1>Contoh Dashboard &amp; Laporan Excel</h1>
+    <p>Kumpulan hasil kerja merapikan data mentah menjadi laporan dan dashboard yang mudah dibaca.</p>
+  </header>
+
+  <div class="gallery">
+
+    <div class="card">
+      <h3>Sales Dashboard Bulanan</h3>
+      <p>Total sales, tren penjualan per bulan</p>
+      <div class="mock">
+        <div class="bars">
+          <div class="bar" style="height:35%"></div>
+          <div class="bar" style="height:55%"></div>
+          <div class="bar" style="height:45%"></div>
+          <div class="bar" style="height:70%"></div>
+          <div class="bar" style="height:60%"></div>
+          <div class="bar" style="height:90%"></div>
+          <div class="bar" style="height:78%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Target vs Actual</h3>
+      <p>Pencapaian tim sales per area</p>
+      <div class="mock rows">
+        <div class="row"><span>Area Jakarta</span><b>108%</b></div>
+        <div class="row"><span>Area Bandung</span><b>92%</b></div>
+        <div class="row"><span>Area Surabaya</span><b>101%</b></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Top Product &amp; Customer</h3>
+      <p>Produk terlaris dan pelanggan terbesar</p>
+      <div class="mock donut">
+        <div class="ring"></div>
+        <div class="txt">Kontribusi top 3 produk<b>68% dari total sales</b></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Data Cleaning &amp; Database Customer</h3>
+      <p>Data mentah dirapikan jadi database siap pakai</p>
+      <div class="mock list">
+        <div>✓ Format tanggal &amp; angka konsisten</div>
+        <div>✓ Duplikat &amp; data kosong dibersihkan</div>
+        <div>✓ Struktur kolom rapi &amp; siap dianalisis</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <a class="cta" href="#">💬 Diskusi Project Kamu</a>
+  </footer>
+</body>
+</html>
